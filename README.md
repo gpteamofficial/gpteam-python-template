@@ -1,39 +1,109 @@
-# A sample Python project
+# GP Team – Sample Python Project
 
-![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Sample inline image")
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Python Logo")
 
-A sample project that exists as an aid to the [Python Packaging User
-Guide][packaging guide]'s [Tutorial on Packaging and Distributing
-Projects][distribution tutorial].
+This repository contains a minimal, well-structured sample Python project provided by GP Team.
+It is designed as a clean starting point for building Python packages and as a practical reference for developers learning how to structure, package, and distribute Python projects.
 
-This project does not aim to cover best practices for Python project
-development as a whole. For example, it does not provide guidance or tool
-recommendations for version control, documentation, or testing.
+This template is intentionally simple. It focuses on packaging structure rather than full development workflows such as testing, documentation systems, or advanced tooling.
 
-[The source for this project is available here][src].
+--------------------------------------------------------------------
 
-The metadata for a Python project is defined in the `pyproject.toml` file,
-an example of which is included in this project. You should edit this file
-accordingly to adapt this sample project to your needs.
+## Purpose
 
-----
+This project is adapted from the original Python Packaging Authority (PyPA) sample, enhanced and customized for GP Team developers.
 
-This is the README file for the project.
+Its main goals are to:
 
-The file should use UTF-8 encoding and can be written using
-[reStructuredText][rst] or [markdown][md use] with the appropriate [key set][md
-use]. It will be used to generate the project webpage on PyPI and will be
-displayed as the project homepage on common code-hosting services, and should be
-written for that purpose.
+- Demonstrate a modern Python project layout
+- Provide a clean template for new GP Team projects
+- Help beginners understand the basics of Python packaging
+- Serve as a lightweight reference for internal or public projects
 
-Typical contents for this file would include an overview of the project, basic
-usage examples, etc. Generally, including the project changelog in here is not a
-good idea, although a simple “What's New” section for the most recent version
-may be appropriate.
+--------------------------------------------------------------------
 
-[packaging guide]: https://packaging.python.org
-[distribution tutorial]: https://packaging.python.org/tutorials/packaging-projects/
-[src]: https://github.com/pypa/sampleproject
-[rst]: http://docutils.sourceforge.net/rst.html
-[md]: https://tools.ietf.org/html/rfc7764#section-3.5 "CommonMark variant"
-[md use]: https://packaging.python.org/specifications/core-metadata/#description-content-type-optional
+## Project Structure
+
+sampleproject/
+│
+├── src/your_package_name/
+│   └── __init__.py
+│
+├── pyproject.toml
+├── README.md
+└── LICENSE
+
+Key Files:
+- pyproject.toml — defines metadata, build system, and package details
+- src/your_package_name — your actual Python module/package
+- README.md — project documentation
+- LICENSE — the chosen open-source license
+
+--------------------------------------------------------------------
+
+## Installation
+
+To install this example package locally:
+
+    pip install .
+
+To build a distributable package:
+
+    python -m build
+
+To install the built wheel:
+
+    pip install dist/*.whl
+
+--------------------------------------------------------------------
+
+## Usage Example
+
+After installation:
+
+    import your_package_name
+    your_package_name.example_function()
+
+Feel free to rename the package and update the module contents to suit your project needs.
+
+--------------------------------------------------------------------
+
+## README Information
+
+This README uses UTF-8 encoding and can be written in Markdown or reStructuredText.
+The content will appear as:
+
+- The project homepage on PyPI
+- The main description on hosting services like GitHub
+
+Recommended sections include:
+
+- Overview
+- Features
+- Installation
+- Usage
+- License
+- Contributing
+
+--------------------------------------------------------------------
+
+## Helpful Resources
+
+Python Packaging User Guide:
+https://packaging.python.org
+
+Packaging Projects Tutorial:
+https://packaging.python.org/tutorials/packaging-projects/
+
+--------------------------------------------------------------------
+
+## License
+
+This project remains open-source and is provided under the same license as the original template.
+
+--------------------------------------------------------------------
+
+## Credits
+
+Based on: https://github.com/pypa/sampleproject
+Customized and enhanced by GP Team.
